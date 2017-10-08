@@ -30,5 +30,11 @@ Metalsmith(__dirname)
         outputStyle: 'compressed'
     }))
     .use(coffee())
+    .metadata({
+      site: {
+        name: "phiden.net: jewelry &amp; other things",
+        description: "phiden is sophia dengo, indie jeweler, knitter, sewist, &amp; general maker of things."
+      }
+    })
     .destination('./build')
     .build(function (err) { if(err) console.log(err) })

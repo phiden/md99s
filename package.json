@@ -1,5 +1,5 @@
 {
-  "name": "metalsmith-tutorial",
+  "name": "phiden.net",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/RobinThrift/metalsmith-tutorial.git"
+    "url": "https://github.com/phiden/phiden-static"
   },
-  "author": "Robin Thrift <thrift.d.robin@googlemail.com>",
+  "author": "Sophia Dengo <sophia@phiden.net>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RobinThrift/metalsmith-tutorial/issues"
+    "url": "https://github.com/phiden/phiden-static/issues"
   },
-  "homepage": "https://github.com/RobinThrift/metalsmith-tutorial",
+  "homepage": "htts://phiden.net",
   "devDependencies": {
     "handlebars": "^2.0.0",
     "metalsmith": "^0.6.1",
