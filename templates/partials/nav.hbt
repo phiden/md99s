@@ -1,0 +1,9 @@
+  <nav>
+    <logo alt='This is a logo. Follow it home!'>woo!</logo>
+    <ul>
+      <li>shop</li>
+      <li>commissions &amp; repairs</li>
+      <li>about &amp; contact</li>
+      <li>archive</li>
+    </ul>
+  </nav>
