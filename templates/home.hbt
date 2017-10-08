@@ -1,4 +1,4 @@
-{{> header}}
+{{> home_header}}
 
     <div class="main-wrapper">
         {{{ contents }}}

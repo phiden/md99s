@@ -11,6 +11,7 @@ Handlebars.registerPartial('header', fs.readFileSync(__dirname + '/templates/par
 Handlebars.registerPartial('footer', fs.readFileSync(__dirname + '/templates/partials/footer.hbt').toString());
 Handlebars.registerPartial('nav', fs.readFileSync(__dirname + '/templates/partials/nav.hbt').toString());
 Handlebars.registerPartial('sidebar', fs.readFileSync(__dirname + '/templates/partials/sidebar.hbt').toString());
+Handlebars.registerPartial('home_header', fs.readFileSync(__dirname + '/templates/partials/home_header.hbt').toString());
 
 Metalsmith(__dirname)
     .use(markdown())
