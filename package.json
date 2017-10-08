@@ -19,7 +19,10 @@
   "devDependencies": {
     "handlebars": "^2.0.0",
     "metalsmith": "^0.6.1",
+    "metalsmith-coffee": "0.0.2",
     "metalsmith-markdown": "^0.2.1",
-    "metalsmith-templates": "^0.4.0"
+    "metalsmith-sass": "^1.4.0",
+    "metalsmith-templates": "^0.4.0",
+    "uswds": "^1.3.1"
   }
 }

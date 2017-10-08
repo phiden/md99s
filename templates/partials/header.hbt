@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>{{ title }} | Metalsmith Page</title>
+</head>
+
+<body> <!-- closes in footer.hbt -->
+
+<header>
+  <nav>
+  </nav>
+</header>
