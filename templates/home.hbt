@@ -1,7 +1,7 @@
 {{> home_header}}
 
-    <div class="main-wrapper">
-        {{{ contents }}}
+    <div class="usa-grid-full">
+        
     </div>
 
 {{> footer}}
