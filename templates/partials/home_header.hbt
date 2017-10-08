@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>{{ title }} | phiden</title>
+</head>
+
+<body> <!-- closes in footer.hbt -->
+
+<header>
+
+  this is the homepage; it has special nav.
+</header>
