@@ -17,10 +17,14 @@
   },
   "homepage": "htts://phiden.net",
   "devDependencies": {
+    "collections": "^5.0.7",
+    "fs": "0.0.1-security",
     "handlebars": "^2.0.0",
     "metalsmith": "^0.6.1",
     "metalsmith-coffee": "0.0.2",
+    "metalsmith-collections": "^0.9.0",
     "metalsmith-markdown": "^0.2.1",
+    "metalsmith-permalinks": "^0.5.0",
     "metalsmith-sass": "^1.4.0",
     "metalsmith-templates": "^0.4.0",
     "uswds": "^1.3.1"

@@ -1,11 +1,12 @@
 var Metalsmith = require('metalsmith'),
     markdown   = require('metalsmith-markdown');
     templates  = require('metalsmith-templates');
-    //haven't installed any of this stuff yet
     Handlebars = require('handlebars'),
     fs         = require('fs');
     collections = require('metalsmith-collections'),
     permalinks  = require('metalsmith-permalinks'),
+
+    //haven't installed any of this stuff yet
 
 Handlebars.registerPartial('header', fs.readFileSync(__dirname + '/templates/partials/header.hbt').toString());
 Handlebars.registerPartial('footer', fs.readFileSync(__dirname + '/templates/partials/footer.hbt').toString());

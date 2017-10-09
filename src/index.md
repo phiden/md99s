@@ -2,6 +2,5 @@
 title: Home
 template: home.hbt
 ---
-Hi, this is my start page; neat ain't it? ;)
 
-### Some info!
+<logo>Phiden.net</logo> <!--not even sure this is valid html5-->
