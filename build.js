@@ -5,6 +5,8 @@ var Metalsmith = require('metalsmith'),
     fs         = require('fs');
     collections = require('metalsmith-collections'),
     permalinks  = require('metalsmith-permalinks'),
+    sass        = require('metalsmith-sass'),
+    coffee      = require('metalsmith-coffee'),
 
     //haven't installed any of this stuff yet
 
