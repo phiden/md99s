@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8" />
     <title>{{ title }} | phiden</title>
+
+    <!-- Typekit -->
+    <script src="https://use.typekit.net/ucl0frg.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body> <!-- closes in footer.hbt -->
 
 <header>
 
-  this is the homepage; it has special layout.
-
+  <h1>phiden makes things</h1>
+  <nav>
+    {{> nav}}
+  </nav>
 </header>

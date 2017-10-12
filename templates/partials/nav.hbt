@@ -4,6 +4,6 @@
       <li>shop</li>
       <li>commissions &amp; repairs</li>
       <li>about &amp; contact</li>
-      <li>archive</li>
+      <li><a href='../all-posts/index'>archive</a></li>
     </ul>
   </nav>

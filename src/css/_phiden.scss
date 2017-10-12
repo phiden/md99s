@@ -4,14 +4,13 @@ html, body {
 
 body {
   font-family: "mrs-eaves",serif;
+  font-weight: 400;
 }
 
-/*
+.bold {
+  font-weight: 700;
+}
 
-Roman	"mrs-eaves"	400	normal
-
-Italic	"mrs-eaves"	400	italic
-
-Bold	"mrs-eaves"	700	normal
-
-*/
+.italic {
+  font-style: italic;
+}

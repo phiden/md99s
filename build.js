@@ -7,6 +7,8 @@ var Metalsmith = require('metalsmith'),
     permalinks  = require('metalsmith-permalinks'),
     sass        = require('metalsmith-sass'),
     coffee      = require('metalsmith-coffee'),
+    browserSync = require('browser-sync'),
+    argv        = require('minimist')(process.argv)
 
     //haven't installed any of this stuff yet
 
@@ -16,31 +18,62 @@ Handlebars.registerPartial('nav', fs.readFileSync(__dirname + '/templates/partia
 Handlebars.registerPartial('sidebar', fs.readFileSync(__dirname + '/templates/partials/sidebar.hbt').toString());
 Handlebars.registerPartial('home_header', fs.readFileSync(__dirname + '/templates/partials/home_header.hbt').toString());
 
-Metalsmith(__dirname)
-    .use(markdown())
-    .use(templates('handlebars'))
-    .use(collections({
-        pages: {
-            pattern: 'content/pages/*.md'
-        },
-        posts: {
-            pattern: 'content/posts/*.md',
-            sortBy: 'date',
-            reverse: true
+if (!argv.deploy) {
+    browserSync({
+        server: 'build',
+        files: ['src/*.md', 'layouts/*.html', 'assets/*.css'],
+        middleware: function (req, res, next) {
+            build(next);
         }
-    }))
-    .use(permalinks({
-        pattern: ':collection/:title'
-    }))
-    .use(sass({
-        outputStyle: 'compressed'
-    }))
-    .use(coffee())
-    .metadata({
-      site: {
-        name: "phiden.net: jewelry &amp; other things",
-        description: "phiden is sophia dengo, indie jeweler, knitter, sewist, &amp; general maker of things."
-      }
     })
-    .destination('./build')
-    .build(function (err) { if(err) console.log(err) })
+}
+
+else {
+    build(function () {
+        console.log('Done building.');
+    })
+}
+
+function build (callback) {
+
+    Metalsmith(__dirname)
+        // This is the source directory
+        .source('./src')
+
+        // This is where I want to build my files to
+        .destination('./build')
+
+        .use(markdown())
+        .use(templates('handlebars'))
+        .use(permalinks({
+            pattern: ':collection/:title'
+        }))
+        .use(collections({
+            pages: {
+                pattern: 'content/pages/*.md'
+            },
+            posts: {
+                pattern: 'content/posts/*.md',
+                sortBy: 'date',
+                reverse: true
+            }
+        }))
+        .use(sass({
+            outputStyle: 'compressed'
+        }))
+        .use(coffee())
+        .metadata({
+          site: {
+            name: "phiden.net: jewelry &amp; other things",
+            description: "phiden is sophia dengo, indie jeweler, knitter, sewist, &amp; general maker of things."
+          }
+        })
+
+        // Build everything!
+        .build(function (err) {
+            var message = err ? err : 'Build complete';
+            console.log(message);
+            callback();
+        });
+
+}
