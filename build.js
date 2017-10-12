@@ -19,6 +19,13 @@ Handlebars.registerPartial('nav', fs.readFileSync(__dirname + '/templates/partia
 Handlebars.registerPartial('sidebar', fs.readFileSync(__dirname + '/templates/partials/sidebar.hbt').toString());
 Handlebars.registerPartial('home_header', fs.readFileSync(__dirname + '/templates/partials/home_header.hbt').toString());
 
+//I like seeing what time stuff builds
+function timestamp() {
+
+    var time = new Date().toTimeString();
+    return time;
+}
+
 if (!argv.deploy) {
     browserSync({
         server: 'build',
@@ -31,15 +38,8 @@ if (!argv.deploy) {
 
 else {
     build(function () {
-        console.log('Done building.');
+        console.log('Done building @ ' + timestamp());
     })
-}
-
-// Function for easier timestamp inclusion
-function timestamp() {
-
-    var milliseconds = new Date().toTimeString();
-    return milliseconds;
 }
 
 function build (callback) {
