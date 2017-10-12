@@ -8,7 +8,8 @@ var Metalsmith = require('metalsmith'),
     sass        = require('metalsmith-sass'),
     coffee      = require('metalsmith-coffee'),
     browserSync = require('browser-sync'),
-    argv        = require('minimist')(process.argv)
+    argv        = require('minimist')(process.argv),
+    date        = require('metalsmith-build-date'),
 
     //haven't installed any of this stuff yet
 
@@ -34,6 +35,13 @@ else {
     })
 }
 
+// Function for easier timestamp inclusion
+function timestamp() {
+
+    var milliseconds = new Date().toTimeString();
+    return milliseconds;
+}
+
 function build (callback) {
 
     Metalsmith(__dirname)
@@ -42,7 +50,6 @@ function build (callback) {
 
         // This is where I want to build my files to
         .destination('./build')
-
         .use(markdown())
         .use(templates('handlebars'))
         .use(permalinks({
@@ -62,6 +69,7 @@ function build (callback) {
             outputStyle: 'compressed'
         }))
         .use(coffee())
+        .use(date())
         .metadata({
           site: {
             name: "phiden.net: jewelry &amp; other things",
@@ -71,7 +79,7 @@ function build (callback) {
 
         // Build everything!
         .build(function (err) {
-            var message = err ? err : 'Build complete';
+            var message = err ? err : 'Build complete @ ' +  timestamp();
             console.log(message);
             callback();
         });
