@@ -6,7 +6,6 @@ var Metalsmith = require('metalsmith'),
     collections = require('metalsmith-collections'),
     permalinks  = require('metalsmith-permalinks'),
     sass        = require('metalsmith-sass'),
-    coffee      = require('metalsmith-coffee'),
     browserSync = require('browser-sync'),
     argv        = require('minimist')(process.argv),
     date        = require('metalsmith-build-date'),
@@ -68,7 +67,6 @@ function build (callback) {
         .use(sass({
             outputStyle: 'compressed'
         }))
-        .use(coffee())
         .use(date())
         .metadata({
           site: {
