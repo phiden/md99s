@@ -50,7 +50,6 @@ function build (callback) {
         // This is where I want to build my files to
         .destination('./build')
         .use(markdown())
-        .use(templates('handlebars'))
         .use(permalinks({
             pattern: ':collection/:title'
         }))
@@ -64,6 +63,7 @@ function build (callback) {
                 reverse: true
             }
         }))
+        .use(templates('handlebars'))
         .use(sass({
             outputStyle: 'compressed'
         }))

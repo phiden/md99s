@@ -3,7 +3,14 @@
     <ul>
       <li>shop</li>
       <li>commissions &amp; repairs</li>
-      <li>about &amp; contact</li>
+      <li><a href='content/pages/about/index.html'>about &amp; contact</a></li>
       <li><a href='content/pages/archive/index.html'>archive!</a></li>
     </ul>
   </nav>
+
+
+Next steps:
+
+* display blog posts
+* why isn't browsersync working? maybe switch to metalsmith watch -- look at vets config
+* get nav behaving across the board
