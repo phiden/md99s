@@ -1,35 +1,44 @@
 {
-  "name": "phiden.net",
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "name": "metalsmith-demo",
+  "version": "1.0.0",
+  "description": "A demonstration site created using the Node.js Metalsmith static site generator",
+  "homepage": "https://github.com/craigbuckler/metalsmith-demo#readme",
+  "main": "build.js",
   "scripts": {
+    "start": "node ./build.js",
+    "production": "NODE_ENV=production node ./build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/phiden/phiden-static"
+    "url": "git+https://github.com/craigbuckler/metalsmith-demo.git"
   },
-  "author": "Sophia Dengo <sophia@phiden.net>",
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/phiden/phiden-static/issues"
+    "url": "https://github.com/craigbuckler/metalsmith-demo/issues"
   },
-  "homepage": "htts://phiden.net",
+  "keywords": [
+    "node.js",
+    "javascript",
+    "metalsmith",
+    "static",
+    "website"
+  ],
+  "author": "Craig Buckler",
+  "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^2.18.13",
-    "collections": "^5.0.7",
-    "fs": "0.0.1-security",
-    "handlebars": "^2.0.0",
-    "metalsmith": "^0.6.1",
-    "metalsmith-build-date": "^0.2.0",
-    "metalsmith-coffee": "0.0.2",
-    "metalsmith-collections": "^0.9.0",
+    "handlebars": "^4.0.11",
+    "metalsmith": "^2.3.0",
+    "metalsmith-assets": "^0.1.0",
+    "metalsmith-browser-sync": "^1.1.1",
+    "metalsmith-collections": "^0.7.0",
+    "metalsmith-feed": "^0.2.0",
+    "metalsmith-html-minifier": "^2.4.3",
+    "metalsmith-in-place": "^1.4.4",
+    "metalsmith-layouts": "^1.8.1",
+    "metalsmith-mapsite": "^1.0.4",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-permalinks": "^0.5.0",
-    "metalsmith-sass": "^1.4.0",
-    "metalsmith-templates": "^0.4.0",
-    "minimist": "^1.2.0",
-    "uswds": "^1.3.1"
+    "metalsmith-publish": "^0.1.5",
+    "metalsmith-word-count": "0.0.4"
   }
 }
