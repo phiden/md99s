@@ -3,7 +3,7 @@
 
 <article>
     <ul>
-        {{#each collections.posts}}
+        {{#each collections.archive}}
             <li>
                 <h3>{{this.title}}</h3>
                 <article>{{this.contents}}</article>

@@ -2,6 +2,7 @@
 title: "Getting started (again) is the hardest part"
 date: 2017-10-08
 template: post.hbt
+collection: Archive
 ---
 
 My jewelry business is in a sad state. My maker life is in a slightly less sad state. I've been overwhelmed and stuck, and it's felt next to impossible to make any sort of forward progress.

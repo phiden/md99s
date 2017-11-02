@@ -54,14 +54,8 @@ function build (callback) {
             pattern: ':collection/:title'
         }))
         .use(collections({
-            pages: {
-                pattern: 'content/pages/*.md'
-            },
-            posts: {
-                pattern: 'content/posts/*.md',
-                sortBy: 'date',
-                reverse: true
-            }
+            "About": {"sortBy": "date"},
+            "Archive": {"sortBy": "date"},
         }))
         .use(templates('handlebars'))
         .use(sass({
