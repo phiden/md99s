@@ -45,11 +45,11 @@ var
   siteMeta = {
     devBuild: devBuild,
     version: pkg.version,
-    name: 'Static site',
-    desc: 'A demonstration static site built using Metalsmith',
-    author: 'Craig Buckler',
-    contact: 'https://twitter.com/craigbuckler',
-    domain: devBuild ? 'http://127.0.0.1' : 'https://rawgit.com', // set domain
+    name: 'phiden.net',
+    desc: 'Codevember project to relaunch phiden.net',
+    author: 'Sophia Dengo',
+    contact: 'https://twitter.com/phiden',
+    domain: devBuild ? 'http://127.0.0.1' : 'http://phiden.net', // set domain
     rootpath: devBuild ? null : '/craigbuckler/metalsmith-demo/master/build/' // set absolute path (null for relative)
   },
 

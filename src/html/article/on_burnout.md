@@ -1,7 +1,7 @@
 ---
 title: "On burnout, and giving yourself permission"
 date: 2017-10-12
-template: post.hbt
+publish: published
 ---
 
 ### Y'all, I am _tired_.

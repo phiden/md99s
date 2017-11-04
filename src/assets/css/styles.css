@@ -17,6 +17,15 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
   display: block;
 }
 
+h1 {
+  font-family: "lush",sans-serif;
+  }
+
+  h1 {
+  font-family: "mrs-eaves",serif;
+  /* 400, 700 weights, bold & italic */
+  }
+
 h1, h2, .logo {
 	font-family: arial, helvetica, free-sans, sans-serif;
 	font-weight: normal;

@@ -1,7 +1,6 @@
 ---
 title: "Getting started (again) is the hardest part"
 date: 2017-10-08
-template: post.hbt
 publish: published
 ---
 
