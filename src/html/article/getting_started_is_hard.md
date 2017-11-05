@@ -1,5 +1,5 @@
 ---
-title: "Getting started (again) is the hardest part"
+title: Getting started (again) is the hardest part
 date: 2017-10-08
 publish: published
 ---

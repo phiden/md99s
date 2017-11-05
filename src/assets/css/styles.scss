@@ -6,10 +6,9 @@
 }
 
 body {
-	font-family: georgia, cambria, "times new roman", times, serif;
+	font-family: "mrs-eaves",georgia, serif;
 	font-size: 1em;
 	color: #555;
-	background-color: #eee;
 	line-height: 1.5;
 }
 
@@ -17,22 +16,27 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
   display: block;
 }
 
-h1 {
-  font-family: "lush",sans-serif;
-  }
+.home {
 
-  h1 {
-  font-family: "mrs-eaves",serif;
-  /* 400, 700 weights, bold & italic */
-  }
+  text-align: center;
+  margin:0 auto;
 
-h1, h2, .logo {
-	font-family: arial, helvetica, free-sans, sans-serif;
-	font-weight: normal;
+  nav {
+
+    ul {
+
+      li {
+
+        display:inline-block;
+        list-style: none;
+      }
+    }
+  }
 }
 
 h1 {
-	font-size: 1.6em;
+  font-family: "lush", serif;
+  font-size:2em;
 }
 
 h2 {
@@ -165,16 +169,6 @@ footer p {
 	margin: 0;
 }
 
-.logo {
-	font-size: 1.5em;
-	margin: 0.2em 0 0 0;
-}
-
-.logo a {
-	padding: 0.2em 0;
-	color: #999;
-}
-
 /* navigation */
 .nav ul {
 	display: flex;
@@ -222,10 +216,6 @@ footer p {
 	header {
 		position: fixed;
 		top: 0;
-	}
-
-	.logo {
-		float: left;
 	}
 
 	.nav.main {

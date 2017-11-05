@@ -45,7 +45,7 @@ var
   siteMeta = {
     devBuild: devBuild,
     version: pkg.version,
-    name: 'phiden.net',
+    name: 'phiden jewelry',
     desc: 'Codevember project to relaunch phiden.net',
     author: 'Sophia Dengo',
     contact: 'https://twitter.com/phiden',
