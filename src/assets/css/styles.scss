@@ -10,12 +10,30 @@ body {
 	font-size: 1em;
 	color: #555;
 	line-height: 1.5;
+  display: grid;
+}
+
+footer {
+
+  width:100%;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+main {
+
+  width:80%;
+  height:80vh;
+  margin:0 auto;
+  border:1px solid red;
 }
 
 .home {
 
   text-align: center;
   margin:0 auto;
+  padding-top:30vh;
 
   nav {
 
@@ -35,7 +53,10 @@ h1 {
   font-size:2em;
 }
 
+.logo {
 
+  width:50%;
+}
 
 @media (min-width: 16em) {
 
