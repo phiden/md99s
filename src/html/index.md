@@ -5,9 +5,9 @@ priority: 1.0
 layout: home.html
 ---
 
-<div>
+<div class='logo'>
 
-  <img class='logo' src='{{ root }}/images/phiden_logo.svg'/>
-  <h2>pretty, shiny things, handmade in Baltimore</h2>
+  <img src='{{ root }}/images/phiden_logo.svg'/>
+  <h2>handmade in Baltimore</h2>
 
 </div>

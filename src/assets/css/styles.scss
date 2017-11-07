@@ -5,8 +5,13 @@
 	margin: 0;
 }
 
+h1, h2, h3, h4, h5 {
+
+  font-weight: normal;
+}
+
 body {
-	font-family: "mrs-eaves",georgia, serif;
+	font-family: "mrs-eaves", georgia, serif;
 	font-size: 1em;
 	color: #555;
 	line-height: 1.5;
@@ -33,14 +38,25 @@ main {
 
   text-align: center;
   margin:0 auto;
-  padding-top:30vh;
+  padding-top:10vh;
 
   nav {
 
+    width:60%;
+    margin:0 auto;
+    text-align: center;
+    border:1px solid yellow;
+
     ul {
+
+      display: grid;
+      border:1px solid green;
+      grid-gap:10;
+      grid-template-columns: repeat(4, 1fr);
 
       li {
 
+        border:1px solid orange;
         display:inline-block;
         list-style: none;
       }
@@ -55,7 +71,10 @@ h1 {
 
 .logo {
 
-  width:50%;
+  img {
+    width:50%;
+  }
+
 }
 
 @media (min-width: 16em) {

@@ -4,8 +4,11 @@
   padding: 0;
   margin: 0; }
 
+h1, h2, h3, h4, h5 {
+  font-weight: normal; }
+
 body {
-  font-family: "mrs-eaves",georgia, serif;
+  font-family: "mrs-eaves", georgia, serif;
   font-size: 1em;
   color: #555;
   line-height: 1.5;
@@ -26,16 +29,27 @@ main {
 .home {
   text-align: center;
   margin: 0 auto;
-  padding-top: 30vh; }
-  .home nav ul li {
-    display: inline-block;
-    list-style: none; }
+  padding-top: 10vh; }
+  .home nav {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid yellow; }
+    .home nav ul {
+      display: grid;
+      border: 1px solid green;
+      grid-gap: 10;
+      grid-template-columns: repeat(4, 1fr); }
+      .home nav ul li {
+        border: 1px solid orange;
+        display: inline-block;
+        list-style: none; }
 
 h1 {
   font-family: "lush", serif;
   font-size: 2em; }
 
-.logo {
+.logo img {
   width: 50%; }
 
 /*# sourceMappingURL=styles.css.map */
