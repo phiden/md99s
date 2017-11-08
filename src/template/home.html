@@ -8,8 +8,20 @@
 <main class='home'>
 
 	{{{ contents }}}
+	{{> navmain }}
 
-		{{> navmain }}
+</main>
+
+<main class='content'>
+
+	??
+
+ {{#each collections.article}}
+	 <li><a href={{path}}>{{title}}</a></li>
+ {{/each}}
+
+!!
+
 
 </main>
 
