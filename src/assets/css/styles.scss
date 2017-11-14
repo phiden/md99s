@@ -72,6 +72,29 @@ main {
 
 }
 
+nav {
+
+  width:60%;
+  margin:0 auto;
+  text-align: center;
+  border:1px solid yellow;
+
+  ul {
+
+    display: grid;
+    border:1px solid green;
+    grid-gap:10;
+    grid-template-columns: repeat(4, 1fr);
+
+    li {
+
+      border:1px solid orange;
+      display:inline-block;
+      list-style: none;
+    }
+  }
+}
+
 @media (min-width: 16em) {
 
 
