@@ -14,14 +14,17 @@
 
 <main class='content'>
 
-	??
-
  {{#each collections.article}}
-	 <li><a href={{path}}>{{title}}</a></li>
+
+	 <li class='blog-excerpt'>
+		 <h3><a href={{path}}>{{title}}</a></h3>
+		 {{#if image}}
+		 <img src={{image}} class='blog-hero'/>
+		 {{/if}}
+		 <p>{{excerpt}}</p>
+	 </li>
+
  {{/each}}
-
-!!
-
 
 </main>
 

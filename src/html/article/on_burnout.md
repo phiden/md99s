@@ -2,9 +2,11 @@
 title: "On burnout, and giving yourself permission"
 date: 2017-10-12
 publish: published
+image: 'images/blog/tired.jpg'
+excerpt: It's ok to be tired -- and to give yourself permission to take what you need to recover.
 ---
 
-### Y'all, I am _tired_.
+Y'all, I am _tired_.
 
 It's been a very big year on so many different levels, and I'm wiped. Just as I started to recover post-move and post-wedding (two lovely things that sucked absolutely every last bit of energy from my cells), I looked up and it was holiday show season! When did _that_ happen?!
 

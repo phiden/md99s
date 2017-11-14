@@ -32,6 +32,11 @@ main {
   height:80vh;
   margin:0 auto;
   border:1px solid red;
+
+  &.subpages {
+
+    height:100%;
+  }
 }
 
 .home {
@@ -76,7 +81,6 @@ nav {
 
   width:60%;
   margin:0 auto;
-  text-align: center;
   border:1px solid yellow;
 
   ul {
@@ -95,6 +99,31 @@ nav {
   }
 }
 
+p {
+
+  padding-bottom: 1em;
+}
+
+.articleinfo {
+
+  padding-bottom: 2em;
+
+}
+
+.blog-excerpt {
+
+  clear:both;
+  overflow: auto;
+  border:1px solid purple;
+  width:80%;
+
+  img {
+
+    width:30%;
+    float:left;
+
+  }
+}
 @media (min-width: 16em) {
 
 

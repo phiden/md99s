@@ -25,6 +25,8 @@ main {
   height: 80vh;
   margin: 0 auto;
   border: 1px solid red; }
+  main.subpages {
+    height: 100%; }
 
 .home {
   text-align: center;
@@ -51,7 +53,6 @@ main {
 nav {
   width: 60%;
   margin: 0 auto;
-  text-align: center;
   border: 1px solid yellow; }
   nav ul {
     display: grid;
@@ -62,5 +63,20 @@ nav {
       border: 1px solid orange;
       display: inline-block;
       list-style: none; }
+
+p {
+  padding-bottom: 1em; }
+
+.articleinfo {
+  padding-bottom: 2em; }
+
+.blog-excerpt {
+  clear: both;
+  overflow: auto;
+  border: 1px solid purple;
+  width: 80%; }
+  .blog-excerpt img {
+    width: 30%;
+    float: left; }
 
 /*# sourceMappingURL=styles.css.map */
