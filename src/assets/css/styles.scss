@@ -1,4 +1,7 @@
 /* basic page styles */
+
+$linkcolor: pink;
+
 *, *:before, *:after {
   box-sizing: border-box;
 	padding: 0;
@@ -29,13 +32,26 @@ footer {
 main {
 
   width:80%;
-  height:80vh;
   margin:0 auto;
   border:1px solid red;
 
   &.subpages {
 
     height:100%;
+  }
+}
+
+a {
+
+  text-decoration: none;
+
+  &:hover, &:active {
+
+    border-bottom:3px solid $linkcolor;
+  }
+
+  &:visited {
+    color: black;
   }
 }
 
@@ -50,20 +66,19 @@ main {
     width:60%;
     margin:0 auto;
     text-align: center;
-    border:1px solid yellow;
+    padding-top:2em;
 
     ul {
 
       display: grid;
-      border:1px solid green;
       grid-gap:10;
       grid-template-columns: repeat(4, 1fr);
 
       li {
 
-        border:1px solid orange;
         display:inline-block;
         list-style: none;
+        padding:1em;
       }
     }
   }
@@ -81,18 +96,15 @@ nav {
 
   width:60%;
   margin:0 auto;
-  border:1px solid yellow;
 
   ul {
 
     display: grid;
-    border:1px solid green;
     grid-gap:10;
     grid-template-columns: repeat(4, 1fr);
 
     li {
 
-      border:1px solid orange;
       display:inline-block;
       list-style: none;
     }

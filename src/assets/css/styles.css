@@ -22,11 +22,17 @@ footer {
 
 main {
   width: 80%;
-  height: 80vh;
   margin: 0 auto;
   border: 1px solid red; }
   main.subpages {
     height: 100%; }
+
+a {
+  text-decoration: none; }
+  a:hover, a:active {
+    border-bottom: 3px solid pink; }
+  a:visited {
+    color: black; }
 
 .home {
   text-align: center;
@@ -36,31 +42,27 @@ main {
     width: 60%;
     margin: 0 auto;
     text-align: center;
-    border: 1px solid yellow; }
+    padding-top: 2em; }
     .home nav ul {
       display: grid;
-      border: 1px solid green;
       grid-gap: 10;
       grid-template-columns: repeat(4, 1fr); }
       .home nav ul li {
-        border: 1px solid orange;
         display: inline-block;
-        list-style: none; }
+        list-style: none;
+        padding: 1em; }
 
 .logo img {
   width: 50%; }
 
 nav {
   width: 60%;
-  margin: 0 auto;
-  border: 1px solid yellow; }
+  margin: 0 auto; }
   nav ul {
     display: grid;
-    border: 1px solid green;
     grid-gap: 10;
     grid-template-columns: repeat(4, 1fr); }
     nav ul li {
-      border: 1px solid orange;
       display: inline-block;
       list-style: none; }
 
