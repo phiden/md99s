@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+{{> meta }}
+</head>
+<body>
+
+<main class='home'>
+
+	{{{ contents }}}
+	{{> navmain }}
+
+</main>
+
+<main class='content'>
+
+ {{#each collections.article}}
+
+IS IS
+ 	{{#is 'Articles'}}
+
+ 		FOOBAR
+
+ 	{{/is}}
+STOP IS
+	 <li class='blog-excerpt'>
+		 <h3><a href={{path}}>{{title}}</a></h3>
+		 {{#if image}}
+		 <img src={{image}} class='blog-hero'/>
+		 {{/if}}
+		 <p>{{excerpt}}</p>
+	 </li>
+ {{/each}}
+
+</main>
+
+{{> footer template='page' }}
+
+</body>
+</html>

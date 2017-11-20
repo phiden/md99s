@@ -1,0 +1,84 @@
+/* basic page styles */
+*, *:before, *:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+h1, h2, h3, h4, h5 {
+  font-weight: normal; }
+
+body {
+  font-family: "mrs-eaves", georgia, serif;
+  font-size: 1em;
+  color: #555;
+  line-height: 1.5;
+  display: grid; }
+
+footer {
+  width: 100%;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  text-align: center; }
+
+main {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid red; }
+  main.subpages {
+    height: 100%; }
+
+a {
+  text-decoration: none; }
+  a:hover, a:active {
+    border-bottom: 3px solid pink; }
+  a:visited {
+    color: black; }
+
+.home {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 10vh; }
+  .home nav {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 2em; }
+    .home nav ul {
+      display: grid;
+      grid-gap: 10;
+      grid-template-columns: repeat(4, 1fr); }
+      .home nav ul li {
+        display: inline-block;
+        list-style: none;
+        padding: 1em; }
+
+.logo img {
+  width: 50%; }
+
+nav {
+  width: 60%;
+  margin: 0 auto; }
+  nav ul {
+    display: grid;
+    grid-gap: 10;
+    grid-template-columns: repeat(4, 1fr); }
+    nav ul li {
+      display: inline-block;
+      list-style: none; }
+
+p {
+  padding-bottom: 1em; }
+
+.articleinfo {
+  padding-bottom: 2em; }
+
+.blog-excerpt {
+  clear: both;
+  overflow: auto;
+  border: 1px solid purple;
+  width: 80%; }
+  .blog-excerpt img {
+    width: 30%;
+    float: left; }
+
+/*# sourceMappingURL=styles.css.map */

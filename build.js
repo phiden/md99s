@@ -1,79 +1,127 @@
-var Metalsmith = require('metalsmith'),
-    markdown   = require('metalsmith-markdown');
-    templates  = require('metalsmith-templates');
-    Handlebars = require('handlebars'),
-    fs         = require('fs');
-    collections = require('metalsmith-collections'),
-    permalinks  = require('metalsmith-permalinks'),
-    sass        = require('metalsmith-sass'),
-    browserSync = require('browser-sync'),
-    argv        = require('minimist')(process.argv),
-    date        = require('metalsmith-build-date'),
+#!/usr/bin/env node
 
-    //haven't installed any of this stuff yet
+/*
+Metalsmith build file
+Build site with `node ./build.js` or `npm start`
+Build production site with `npm run production`
+*/
 
-Handlebars.registerPartial('header', fs.readFileSync(__dirname + '/templates/partials/header.hbt').toString());
-Handlebars.registerPartial('footer', fs.readFileSync(__dirname + '/templates/partials/footer.hbt').toString());
-Handlebars.registerPartial('nav', fs.readFileSync(__dirname + '/templates/partials/nav.hbt').toString());
-Handlebars.registerPartial('sidebar', fs.readFileSync(__dirname + '/templates/partials/sidebar.hbt').toString());
-Handlebars.registerPartial('home_header', fs.readFileSync(__dirname + '/templates/partials/home_header.hbt').toString());
+'use strict';
 
-//I like seeing what time stuff builds
-function timestamp() {
+var
+// defaults
+  consoleLog = false, // set true for metalsmith file and meta content logging
+  devBuild = ((process.env.NODE_ENV || '').trim().toLowerCase() !== 'production'),
+  pkg = require('./package.json'),
 
-    var time = new Date().toTimeString();
-    return time;
-}
+  // main directories
+  dir = {
+    base: __dirname + '/',
+    lib: __dirname + '/lib/',
+    source: './src/',
+    dest: './build/'
+  },
 
-if (!argv.deploy) {
-    browserSync({
-        server: 'build',
-        files: ['src/*.md', 'layouts/*.html', 'assets/*.css'],
-        middleware: function (req, res, next) {
-            build(next);
-        }
-    })
-}
+  // modules
+  metalsmith = require('metalsmith'),
+  markdown = require('metalsmith-markdown'),
+  publish = require('metalsmith-publish'),
+  wordcount = require("metalsmith-word-count"),
+  collections = require('metalsmith-collections'),
+  permalinks = require('metalsmith-permalinks'),
+  inplace = require('metalsmith-in-place'),
+  layouts = require('metalsmith-layouts'),
+  sitemap = require('metalsmith-mapsite'),
+  rssfeed = require('metalsmith-feed'),
+  assets = require('metalsmith-assets'),
+  htmlmin = devBuild ? null : require('metalsmith-html-minifier'),
+  browsersync = devBuild ? require('metalsmith-browser-sync') : null,
 
-else {
-    build(function () {
-        console.log('Done building @ ' + timestamp());
-    })
-}
+  // custom plugins
+  setdate = require(dir.lib + 'metalsmith-setdate'),
+  moremeta = require(dir.lib + 'metalsmith-moremeta'),
+  debug = consoleLog ? require(dir.lib + 'metalsmith-debug') : null,
 
-function build (callback) {
+  siteMeta = {
+    devBuild: devBuild,
+    version: pkg.version,
+    name: 'phiden jewelry',
+    desc: 'Codevember project to relaunch phiden.net',
+    author: 'Sophia Dengo',
+    contact: 'https://twitter.com/phiden',
+    domain: devBuild ? 'http://127.0.0.1' : 'http://phiden.net', // set domain
+    rootpath: devBuild ? null : '/craigbuckler/metalsmith-demo/master/build/' // set absolute path (null for relative)
+  },
 
-    Metalsmith(__dirname)
-        // This is the source directory
-        .source('./src')
+  templateConfig = {
+    engine: 'handlebars',
+    directory: dir.source + 'template/',
+    partials: dir.source + 'partials/',
+    default: 'page.html'
+  };
 
-        // This is where I want to build my files to
-        .destination('./build')
-        .use(markdown())
-        .use(permalinks({
-            pattern: ':collection/:title'
-        }))
-        .use(collections({
-            "About": {"sortBy": "date"},
-            "Archive": {"sortBy": "date"},
-        }))
-        .use(templates('handlebars'))
-        .use(sass({
-            outputStyle: 'compressed'
-        }))
-        .use(date())
-        .metadata({
-          site: {
-            name: "phiden.net: jewelry &amp; other things",
-            description: "phiden is sophia dengo, indie jeweler, knitter, sewist, &amp; general maker of things."
-          }
-        })
+console.log((devBuild ? 'Development' : 'Production'), 'build, version', pkg.version);
 
-        // Build everything!
-        .build(function (err) {
-            var message = err ? err : 'Build complete @ ' +  timestamp();
-            console.log(message);
-            callback();
-        });
+var ms = metalsmith(dir.base)
+  .clean(!devBuild) // clean folder before a production build
+  .source(dir.source + 'html/') // source folder (src/html/)
+  .destination(dir.dest) // build folder (build/)
+  .metadata(siteMeta) // add meta data to every page
+  .use(publish()) // draft, private, future-dated
+  .use(setdate()) // set date on every page if not set in front-matter
+  .use(collections({ // determine page collection/taxonomy
+    page: {
+      pattern: '**/index.*',
+      sortBy: 'priority',
+      reverse: true,
+      refer: false
+    },
+    article: {
+      pattern: 'article/**/*',
+      sortBy: 'date',
+      reverse: true,
+      refer: true,
+      limit: 50,
+      metadata: {
+        layout: 'article.html'
+      }
+    }
+  }))
+  .use(markdown()) // convert markdown
+  .use(permalinks({ // generate permalinks
+    pattern: ':mainCollection/:title'
+  }))
+  .use(wordcount({
+    raw: true
+  })) // word count
+  .use(moremeta()) // determine root paths and navigation
+  .use(inplace(templateConfig)) // in-page templating
+  .use(layouts(templateConfig)); // layout templating
 
-}
+if (htmlmin) ms.use(htmlmin()); // minify production HTML
+
+if (debug) ms.use(debug()); // output page debugging information
+
+if (browsersync) ms.use(browsersync({ // start test server
+  server: dir.dest,
+  files: [dir.source + '**/*']
+}));
+
+ms
+  .use(sitemap({ // generate sitemap.xml
+    hostname: siteMeta.domain + (siteMeta.rootpath || ''),
+    omitIndex: true
+  }))
+  .use(rssfeed({ // generate RSS feed for articles
+    collection: 'article',
+    site_url: siteMeta.domain + (siteMeta.rootpath || ''),
+    title: siteMeta.name,
+    description: siteMeta.desc
+  }))
+  .use(assets({ // copy assets: CSS, images etc.
+    source: dir.source + 'assets/',
+    destination: './'
+  }))
+  .build(function(err) { // build
+    if (err) throw err;
+  });
