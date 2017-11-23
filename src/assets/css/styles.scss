@@ -55,18 +55,24 @@ a {
   }
 }
 
-.home {
+header {
+  width:100%;
 
-  text-align: center;
-  margin:0 auto;
-  padding-top:10vh;
+  .logo {
+
+    text-align: center;
+    margin:0 auto;
+    padding-top:10vh;
+    background-image: url(../images/header.jpg);
+    background-size:cover;
+
+  }
 
   nav {
 
     width:60%;
     margin:0 auto;
     text-align: center;
-    padding-top:2em;
 
     ul {
 
@@ -87,26 +93,29 @@ a {
 .logo {
 
   img {
-    width:50%;
+    width:35%;
   }
+
+  padding-bottom:2.2rem;
 
 }
 
 nav {
 
-  width:60%;
   margin:0 auto;
+  margin-bottom:2.2rem;
 
   ul {
-
     display: grid;
     grid-gap:10;
     grid-template-columns: repeat(4, 1fr);
 
     li {
 
+      padding-top:1.2rem;
       display:inline-block;
       list-style: none;
+      text-transform: lowercase;
     }
   }
 }

@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-{{> meta }}
-</head>
-<body>
-
-<main class='home'>
-
-	{{{ contents }}}
-	{{> navmain }}
-
-</main>
+{{> header}}
 
 <main class='content'>
 
- {{#each collections.article}}
+ 	{{#each collections.article}}
 
 		{{#isnt this.title "Articles"}}
 		<li class='blog-excerpt'>
@@ -25,7 +13,6 @@
  		 <p>{{excerpt}}</p>
  	 </li>
 		{{/isnt}}
-
 
  {{/each}}
 
