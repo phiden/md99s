@@ -27,6 +27,7 @@
   "license": "MIT",
   "devDependencies": {
     "handlebars": "^4.0.11",
+    "handlebars-helpers": "^0.10.0",
     "metalsmith": "^2.3.0",
     "metalsmith-assets": "^0.1.0",
     "metalsmith-browser-sync": "^1.1.1",

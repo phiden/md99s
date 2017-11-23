@@ -34,37 +34,44 @@ a {
   a:visited {
     color: black; }
 
-.home {
-  text-align: center;
-  margin: 0 auto;
-  padding-top: 10vh; }
-  .home nav {
+header {
+  width: 100%; }
+  header .logo {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 10vh;
+    background-image: url(../images/header.jpg);
+    background-size: cover; }
+  header nav {
     width: 60%;
     margin: 0 auto;
-    text-align: center;
-    padding-top: 2em; }
-    .home nav ul {
+    text-align: center; }
+    header nav ul {
       display: grid;
       grid-gap: 10;
       grid-template-columns: repeat(4, 1fr); }
-      .home nav ul li {
+      header nav ul li {
         display: inline-block;
         list-style: none;
         padding: 1em; }
 
-.logo img {
-  width: 50%; }
+.logo {
+  padding-bottom: 2.2rem; }
+  .logo img {
+    width: 35%; }
 
 nav {
-  width: 60%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin-bottom: 2.2rem; }
   nav ul {
     display: grid;
     grid-gap: 10;
     grid-template-columns: repeat(4, 1fr); }
     nav ul li {
+      padding-top: 1.2rem;
       display: inline-block;
-      list-style: none; }
+      list-style: none;
+      text-transform: lowercase; }
 
 p {
   padding-bottom: 1em; }
