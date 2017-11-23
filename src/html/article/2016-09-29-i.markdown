@@ -1,0 +1,31 @@
+---
+author: phiden
+comments: true
+date: 2016-09-29 19:30:01+00:00
+link: http://phiden.net/i/
+slug: i
+title: 'I '
+wordpress_id: 262
+categories:
+- studio
+---
+
+![screen-shot-2016-09-27-at-9-26-27-pm](http://phiden.net/wp-content/uploads/2015/11/Screen-Shot-2016-09-27-at-9.26.27-PM-1024x1022.png)
+
+When I was working at Code for America last year, I was introduced to the [Othermill](https://othermachine.co/othermill-pro/): a desktop CNC machine, run by a Mac, that accepts SVG files as the guide for cutting. Looking through my history, I can see that I've made random mention of CNC milling [before](http://phiden.net/silver-clad-brass-maybe-my-new-favorite/), but that I've never really talked about the mill itself.
+
+So if you read that and were like, huh?, CNC milling is using a computer to control a rotating cutting tool as it cuts through material. (I'm way oversimplifying, but I couldn't find a good resource to link to that didn't make my eyes glaze over.) In manufacturing, CNC milling is the type of process that produces circuit boards and prototype machine pieces. In fact, the Othermill recently got a huge upgrade to the Pro version in order to facilitate that sort of production. 
+
+For me, it amounts to this:
+
+I can start my process in Illustrator and come out the other end with precisely cut and engraved metal. I've used it to fabricate stone settings, play with bi-metals, and translate sketches into reality. It never really results in a finished piece, but it has sped up my production process considerably.
+
+Here's a 15-second video to demonstrate: [watch](https://www.instagram.com/p/BDo9vabE1QA). 
+
+![screen-shot-2016-09-27-at-9-26-54-pm](http://phiden.net/wp-content/uploads/2015/11/Screen-Shot-2016-09-27-at-9.26.54-PM-1024x1005.png)
+
+My Othermill is my favorite tool. I might have literally cried tears of joy when it arrived, and hearing the little electronic song it sings as it cuts makes me super happy. It's opened up avenues for me that I didn't anticipate. 
+
+I think I may have been one of the first jewelers to take a CNC mill to silver, and Othermachine Co., which makes the Othermill, [highlighted my process on their blog](https://othermachine.co/stories/sophia-dengos-streamlined-silversmithing/). (Hello, things that made my year!) I've also gotten to talk to Adobe, which makes Illustrator, about using their software together with the Othermill to [go from idea to object](http://create.adobe.com/2015/10/25/othermill_another_way_to_make.html). 
+
+I'm definitely not the only one, though, and it's amazing to see what [other jewelers are doing](https://othermachine.co/stories/infusing-classic-craftsmanship-with-digital-fabrication-at-metal-pressions/) with the technology. 

@@ -25,6 +25,8 @@ var
   // modules
   metalsmith = require('metalsmith'),
   markdown = require('metalsmith-markdown'),
+  helpers = require('handlebars-helpers'),
+  comparison = helpers.comparison(),
   publish = require('metalsmith-publish'),
   wordcount = require("metalsmith-word-count"),
   collections = require('metalsmith-collections'),
