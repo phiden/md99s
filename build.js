@@ -31,6 +31,7 @@ var
   wordcount = require("metalsmith-word-count"),
   collections = require('metalsmith-collections'),
   permalinks = require('metalsmith-permalinks'),
+  pagination = require('metalsmith-pagination'),
   inplace = require('metalsmith-in-place'),
   layouts = require('metalsmith-layouts'),
   sitemap = require('metalsmith-mapsite'),
@@ -41,7 +42,6 @@ var
 
   // custom plugins
   setdate = require(dir.lib + 'metalsmith-setdate'),
-  moremeta = require(dir.lib + 'metalsmith-moremeta'),
   debug = consoleLog ? require(dir.lib + 'metalsmith-debug') : null,
 
   siteMeta = {
@@ -83,9 +83,23 @@ var ms = metalsmith(dir.base)
       sortBy: 'date',
       reverse: true,
       refer: true,
-      limit: 50,
+      // limit: 50,
       metadata: {
         layout: 'article.html'
+      }
+    }
+  }))
+  .use(pagination({ //pagination goes here
+    'collections.article': {
+      perPage: 10,
+      layout: 'home.html',
+      first: 'index.html',
+      path: 'page/:num/index.html',
+      filter: function (page) {
+        return !page.private
+      },
+      pageMetadata: {
+        title: 'Archive'
       }
     }
   }))
@@ -96,7 +110,6 @@ var ms = metalsmith(dir.base)
   .use(wordcount({
     raw: true
   })) // word count
-  .use(moremeta()) // determine root paths and navigation
   .use(inplace(templateConfig)) // in-page templating
   .use(layouts(templateConfig)); // layout templating
 

@@ -2,6 +2,15 @@
 
 <main class='content'>
 
+	{{pagination.num}}
+	{{pagination.next}}
+	{{pagination.prev}}
+
+
+	{{#each pagination.files}}
+		{{article.title}}
+	{{/each}}
+
  	{{#each collections.article}}
 
 		{{#isnt this.title "Articles"}}

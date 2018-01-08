@@ -38,6 +38,8 @@
     "metalsmith-layouts": "^1.8.1",
     "metalsmith-mapsite": "^1.0.4",
     "metalsmith-markdown": "^0.2.1",
+    "metalsmith-menu": "^1.0.4",
+    "metalsmith-pagination": "^1.4.0",
     "metalsmith-permalinks": "^0.5.0",
     "metalsmith-publish": "^0.1.5",
     "metalsmith-word-count": "0.0.4"
