@@ -11,6 +11,7 @@
 		{{article.title}}
 	{{/each}}
 
+	<section id='articles'>
  	{{#each collections.article}}
 
 		{{#isnt this.title "Articles"}}
@@ -20,10 +21,11 @@
  		 <img src={{image}} class='blog-hero'/>
  		 {{/if}}
  		 <p>{{excerpt}}</p>
- 	 </li>
+ 	 	</li>
 		{{/isnt}}
 
  {{/each}}
+</section>
 
 </main>
 

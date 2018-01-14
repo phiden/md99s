@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-{{> meta }}
-</head>
-<body>
-
 {{> header }}
 
+<button class='test'>CLICK ME</button>
 <main{{#if navsub}} class="subpages"{{/if}}>
 
 			{{#if title}}
@@ -22,4 +16,23 @@
 {{> footer template='page' }}
 
 </body>
+
+<!--
+<script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+<script src='/js/shop.js'></script>
+-->
+
+<script type="text/javascript">
+function getData(data) {
+	console.log('getData');
+  if (data.ok) {
+		console.log('data ok', data);
+        // do something with the data here
+    } else {
+        alert(data.error);
+  }
+}
+</script>
+
+<script src="https://openapi.etsy.com/v2/users/testusername.js?callback=getData&api_key=xlo8g1mbjnr9xwikydzlo6zk"></script>
 </html>

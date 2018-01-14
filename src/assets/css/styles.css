@@ -76,16 +76,25 @@ nav {
 p {
   padding-bottom: 1em; }
 
+#articles {
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  grid-template-rows: none;
+  grid-row-gap: 1.5em;
+  grid-column-gap: 2%;
+  grid-auto-flow: row; }
+  #articles .blog-excerpt {
+    clear: both;
+    overflow: auto;
+    border: 1px solid purple;
+    list-style: none; }
+    #articles .blog-excerpt img {
+      width: 30%;
+      float: left;
+      margin-right: .5em;
+      margin-bottom: .5em; }
+
 .articleinfo {
   padding-bottom: 2em; }
-
-.blog-excerpt {
-  clear: both;
-  overflow: auto;
-  border: 1px solid purple;
-  width: 80%; }
-  .blog-excerpt img {
-    width: 30%;
-    float: left; }
 
 /*# sourceMappingURL=styles.css.map */
