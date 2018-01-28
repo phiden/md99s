@@ -4,6 +4,7 @@ date: 2017-10-12
 publish: published
 image: 'images/blog/tired.jpg'
 excerpt: It's ok to be tired -- and to give yourself permission to take what you need to recover.
+layout: article.html
 ---
 
 Y'all, I am _tired_.

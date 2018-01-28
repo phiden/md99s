@@ -1,14 +1,22 @@
 {{> header }}
 
-<main{{#if navsub}} class="subpages"{{/if}}>
+<main>
 
-			{{#if title}}
-				<h1>{{ title }}</h1>
-			{{/if}}
+	<section id='articles'>
+	{{#each collections.article}}
 
-			{{{ contents }}}
+		{{#isnt this.title "Articles"}}
+		<li class='blog-excerpt'>
+		 <h3><a href=/{{path}}>{{title}}</a></h3>
+		 {{#if image}}
+		 <img src={{image}} class='blog-hero'/>
+		 {{/if}}
+		 <p>{{excerpt}}</p>
+		</li>
+		{{/isnt}}
 
-		{{> navsub }}
+	{{/each}}
+	</section>
 
 </main>
 
