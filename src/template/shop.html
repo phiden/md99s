@@ -1,0 +1,29 @@
+{{> header }}
+
+<main>
+
+	<section id="etsyHeader">
+		<div>
+			<img id='etsyImg' src='' width="150" height="150"/><h2>Shop <a id='etsyURL' href='' target='_blank'>Phiden</a> on Etsy</h2>
+		</div>
+		<div id='vacationBanner' class='hidden'>
+			<!-- put the vacation banner here; call it in loadShopDetails-->
+		</div>
+		<h3 id='etsyTagline'></h3>
+		<p id='shopMessage'></p>
+
+	</section>
+
+	<section id='etsyListings'>
+		<ul></ul>
+	</section>
+
+</main>
+
+{{> footer template='page' }}
+
+</body>
+
+<script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+<script src='/js/shop-test.js'></script>
+</html>

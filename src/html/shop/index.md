@@ -1,7 +1,7 @@
 ---
 title: Shop
 priority: 0.7
-layout: page.html
+layout: shop.html
 ---
 
 Bring in the etsy widget here
