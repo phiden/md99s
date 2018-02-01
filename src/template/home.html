@@ -2,19 +2,15 @@
 
 <main class='content'>
 
-	{{pagination.num}}
-	{{pagination.next}}
-	{{pagination.prev}}
+	<section id='shopFeatured'>
+		<h3>Some cheesy shop title - Featured</h3>
+	</section>
 
-
-	{{#each pagination.files}}
-		{{article.title}}
-	{{/each}}
-
+	<!-- eventually limit this to 10 most recent + add link to blog at the bottom -->
 	<section id='articles'>
- 	{{#each collections.article}}
+ 	{{#each collections.blog}}
 
-		{{#isnt this.title "Articles"}}
+		{{#isnt this.title "Blog"}}
 		<li class='blog-excerpt'>
  		 <h3><a href={{path}}>{{title}}</a></h3>
  		 {{#if image}}

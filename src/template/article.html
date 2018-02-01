@@ -13,38 +13,28 @@
 
 		<article>
 
-			<h1>{{ title }}</h1>
-
-			{{#if isPage}}
-			{{else}}
-
-				<p class="articleinfo">{{ dateFormat }}, {{ readingTime }}-minute read</p>
-
-			{{/if}}
-
+			<section class='articleinfo'>
+				<h1>{{ title }}</h1>
+				<p>{{ dateFormat }}, {{ readingTime }}-minute read</p>
+			</section>
 			{{{ contents }}}
 
-			{{#if isPage}}
-
-				{{> pagelist }}
-
-			{{else}}
-
-				<nav class="nav page">
-					<ul>
+				<nav class="blognav">
 
 					{{#if previous.title }}
-						<li><a href="/{{ previous.path }}" class="back">&laquo; back: {{ previous.title }}</a></li></p>
+					<div>
+						<a href="/{{ previous.path }}" class="back">&laquo; {{ previous.title }}</a>
+					</div>
 					{{/if}}
 
 					{{#if next.title }}
-						<li><a href="/{{ next.path }}" class="next">next: {{ next.title }} &raquo;</a></li></p>
+					<div class="next">
+						<a href="/{{ next.path }}">{{ next.title }} &raquo;</a>
+					</div>
 					{{/if}}
 
-					</ul>
 				</nav>
 
-			{{/if}}
 
 			</article>
 

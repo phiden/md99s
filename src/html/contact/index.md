@@ -1,10 +1,20 @@
 ---
 title: Contact
 priority: 0.7
+layout: basic.html
 ---
 
-Find me online!
+# Find me online!
 
-- [Twitter](https://twitter.com/phiden)
-- [Etsy](https://phiden.etsy.com)
-- [Facebook](https://facebook.com/phidenjewelry)
+<ul id="social_container">
+
+<li>[Twitter](https://twitter.com/phiden)</li>
+<li>[Etsy](https://phiden.etsy.com)</li>
+<li>[Facebook](https://facebook.com/phidenjewelry)</li>
+<li>[Instagram](https://instagram.com/phiden)</li>
+
+</ul>
+
+# Join my mailing list
+
+Find out when I'm doing local events & when I add new pieces to the shop!

@@ -1,3 +1,5 @@
+@import url("https://use.typekit.net/ucl0frg.css");
+
 /* basic page styles */
 
 $linkcolor: pink;
@@ -15,7 +17,7 @@ h1, h2, h3, h4, h5 {
 
 body {
 	font-family: "mrs-eaves", georgia, serif;
-	font-size: 1em;
+	font-size: 16px;
 	color: #555;
 	line-height: 1.5;
   display: grid;
@@ -39,6 +41,13 @@ main {
 
     height:100%;
   }
+
+  article {
+
+    width:80%;
+    margin: 0 auto;
+    line-height:2em;
+  }
 }
 
 a {
@@ -46,7 +55,6 @@ a {
   text-decoration: none;
 
   &:hover, &:active {
-
     border-bottom:3px solid $linkcolor;
   }
 
@@ -100,28 +108,7 @@ header {
 
 }
 
-nav {
-
-  margin:0 auto;
-  margin-bottom:2.2rem;
-
-  ul {
-    display: grid;
-    grid-gap:10;
-    grid-template-columns: repeat(4, 1fr);
-
-    li {
-
-      padding-top:1.2rem;
-      display:inline-block;
-      list-style: none;
-      text-transform: lowercase;
-    }
-  }
-}
-
 p {
-
   padding-bottom: 1em;
 }
 
@@ -134,14 +121,12 @@ p {
   grid-auto-flow: row;
 
   .blog-excerpt {
-
     clear:both;
     overflow: auto;
     border:1px solid purple;
     list-style: none;
 
     img {
-
       width:30%;
       float:left;
       margin-right:.5em;
@@ -153,10 +138,55 @@ p {
 
 .articleinfo {
 
-  padding-bottom: 2em;
+  margin-bottom: 2em;
+  border-bottom: 2px solid silver;
 
+  p {
+    padding-bottom:0;
+  }
 }
 
+#social_container {
+
+  width:100%;
+  display:grid;
+  grid-template-columns: repeat(4,23.5%);
+  grid-template-rows: none;
+  grid-row-gap: 1.5em;
+  grid-column-gap: 2%;
+  grid-auto-flow: row;
+  margin-bottom:3em;
+
+  li {
+    list-style: none;
+    text-align: center;
+  }
+}
+
+.blognav {
+
+  width:100%;
+  display:grid;
+  grid-template-columns: 50% 50%;
+  padding-top:3em;
+
+  div {
+
+    &.next {
+      text-align:right;
+    }
+
+    a {
+      color:white;
+      background-color: $linkcolor;
+      padding:10px;
+      padding-top:12px;
+    }
+  }
+
+
+
+}
 
 @media (min-width: 16em) {
 

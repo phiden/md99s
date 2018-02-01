@@ -78,8 +78,8 @@ var ms = metalsmith(dir.base)
       reverse: true,
       refer: false
     },
-    article: {
-      pattern: 'article/**/*',
+    blog: {
+      pattern: 'blog/**/*',
       sortBy: 'date',
       reverse: true,
       refer: true,
@@ -90,7 +90,7 @@ var ms = metalsmith(dir.base)
     }
   }))
   .use(pagination({ //pagination goes here
-    'collections.article': {
+    'collections.blog': {
       perPage: 10,
       layout: 'home.html',
       first: 'index.html',
@@ -128,7 +128,7 @@ ms
     omitIndex: true
   }))
   .use(rssfeed({ // generate RSS feed for articles
-    collection: 'article',
+    collection: 'blog',
     site_url: siteMeta.domain + (siteMeta.rootpath || ''),
     title: siteMeta.name,
     description: siteMeta.desc
