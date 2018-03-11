@@ -1,12 +1,11 @@
 $(document).ready(function() {
 
-    console.log('hello world');
     var key = 'api_key=xlo8g1mbjnr9xwikydzlo6zk';
     var secret = 'kp2bf30qu2';
     var baseURL = 'https://openapi.etsy.com/v2'
 
     var url = 'https://openapi.etsy.com/v2/users/etsystore.js?callback=getData?' + key;
-    console.log(url);
+    //console.log(url);
 
     $('.test').click(function() {
 

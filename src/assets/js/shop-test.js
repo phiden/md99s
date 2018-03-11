@@ -59,12 +59,12 @@ $(document).ready(function(){
         success: function(data) {
           if (data.ok) {
 
-              console.log(data);
+              // console.log(data);
               listings = data.results;
 
               listings.forEach(function(elem) {
 
-                $('#etsyListings ul').append('<li><img width="250" height="250" src="' + elem.MainImage.url_570xN + '"><h4>' + elem.title + '</h4><p class="price">' + elem.price + '</p><p class="description">' + elem.description + '</p><a href="' + elem.url + '" class="button">Shop on Etsy</a></li>')
+                $('#etsyListings ul').append('<li><img src="' + elem.MainImage.url_570xN + '"><h6>' + elem.title + '</h6><p class="price">' + elem.price + '</p><p class="description">' + elem.description + '</p><a href="' + elem.url + '" class="button">shop on etsy</a></li>')
 
               })
 

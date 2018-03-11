@@ -3,6 +3,7 @@
 /* basic page styles */
 
 $linkcolor: pink;
+$buttoncolor: hotpink;
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -13,6 +14,30 @@ $linkcolor: pink;
 h1, h2, h3, h4, h5 {
 
   font-weight: normal;
+}
+
+h1 {
+  font-size:4rem;
+}
+
+h2 {
+  font-size:3rem;
+}
+
+h3 {
+  font-size:2rem;
+}
+
+h4 {
+  font-size:1.75rem;
+}
+
+h5 {
+  font-size:1.65rem;
+}
+
+h6 {
+  font-size:1.5rem;
 }
 
 body {
@@ -77,13 +102,16 @@ header {
   }
 
   nav {
-
-    width:60%;
-    margin:0 auto;
+    width:100%;
     text-align: center;
+    background-color:$buttoncolor;
+    font-weight: bold;
+    margin-bottom:2rem;
 
     ul {
 
+      width:60%;
+      margin:0 auto;
       display: grid;
       grid-gap:10;
       grid-template-columns: repeat(4, 1fr);
@@ -93,6 +121,22 @@ header {
         display:inline-block;
         list-style: none;
         padding:1em;
+
+        a {
+          width:100%;
+          height:100%;
+          color: white;
+
+          &:visited {
+            color:white;
+          }
+
+          &:hover {
+            border-bottom:4px solid white;
+          }
+        }
+
+
       }
     }
   }
@@ -186,6 +230,67 @@ p {
 
 
 
+}
+
+/* ESTY */
+
+#etsy {
+
+  .mainBanner {
+
+    height:auto;
+    overflow: auto;
+    padding-bottom:2rem;
+
+    img {
+      float:left;
+      width:12%;
+      height:auto;
+    }
+
+    .bannerCopy {
+      float:right;
+      width:87%;
+    }
+  }
+
+  #etsyListings {
+
+    // ily https://medium.com/samsung-internet-dev/common-responsive-layouts-with-css-grid-and-some-without-245a862f48df
+
+    ul{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-gap: 30px;
+
+      li {
+        list-style: none;
+        text-align: center;
+
+        img {
+          width:100%;
+          height:auto;
+
+        }
+
+        .price {
+          font-weight:bold;
+          font-size:1.1rem;
+        }
+
+        .description {
+          text-align: left;
+          margin-bottom: 1rem;
+        }
+
+        .button {
+          color:white;
+          background-color: $buttoncolor;
+          padding: 1rem 2rem ;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 16em) {
