@@ -98,23 +98,25 @@ header {
 p {
   padding-bottom: 1em; }
 
-#articles {
+#articles ul {
   display: grid;
   grid-template-columns: repeat(3, 32%);
   grid-template-rows: none;
   grid-row-gap: 1.5em;
   grid-column-gap: 2%;
   grid-auto-flow: row; }
-  #articles .blog-excerpt {
+  #articles ul .blog-excerpt {
     clear: both;
     overflow: auto;
     border: 1px solid purple;
     list-style: none; }
-    #articles .blog-excerpt img {
+    #articles ul .blog-excerpt img {
       width: 30%;
       float: left;
       margin-right: .5em;
       margin-bottom: .5em; }
+    #articles ul .blog-excerpt .read-more {
+      float: right; }
 
 .articleinfo {
   margin-bottom: 2em;
@@ -149,6 +151,14 @@ p {
     padding-top: 12px; }
 
 /* ESTY */
+#shopFeatured {
+  display: block;
+  min-height: 30rem;
+  height: auto;
+  overflow: visible;
+  margin-bottom: 2rem;
+  border: 1px solid hotpink; }
+
 #etsy .mainBanner {
   height: auto;
   overflow: auto;
@@ -160,23 +170,24 @@ p {
   #etsy .mainBanner .bannerCopy {
     float: right;
     width: 87%; }
-#etsy #etsyListings ul {
+
+#etsyListings ul {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 30px; }
-  #etsy #etsyListings ul li {
+  #etsyListings ul li {
     list-style: none;
     text-align: center; }
-    #etsy #etsyListings ul li img {
+    #etsyListings ul li img {
       width: 100%;
       height: auto; }
-    #etsy #etsyListings ul li .price {
+    #etsyListings ul li .price {
       font-weight: bold;
       font-size: 1.1rem; }
-    #etsy #etsyListings ul li .description {
+    #etsyListings ul li .description {
       text-align: left;
       margin-bottom: 1rem; }
-    #etsy #etsyListings ul li .button {
+    #etsyListings ul li .button {
       color: white;
       background-color: hotpink;
       padding: 1rem 2rem; }

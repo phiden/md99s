@@ -1,5 +1,5 @@
 ---
 title: Shop
-priority: 0.7
+priority: 0.9
 layout: shop.html
 ---
