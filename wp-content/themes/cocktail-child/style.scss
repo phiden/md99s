@@ -1,0 +1,76 @@
+/*
+ Theme Name:   Cocktail Child
+ Theme URI:
+ Description:  Cocktail for the 99s
+ Author:       Sophia Dengo
+ Author URI:   http://sophiadengo.com
+ Template:     cocktail
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  cocktail-child
+*/
+
+$color-primary-blue: #04428A;
+$color-secondary-blue: #006FAE;
+$color-coral-red: #F93A2B;
+$color-dk-gray: #242424;
+
+body {
+  color: $color-dk-gray;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'URWClassicoRegular';
+  font-weight: normal;
+  font-style: normal;
+  color: $color-dk-gray;
+}
+
+.page-title,
+p {
+  color: $color-dk-gray;
+}
+
+button,
+input,
+select,
+textarea {
+  color: $color-secondary-blue;
+}
+
+form.customize-unpreviewable, form.customize-unpreviewable input, form.customize-unpreviewable select, form.customize-unpreviewable button, a.customize-unpreviewable, area.customize-unpreviewable,
+.main-navigation a:hover,
+.main-navigation ul li.current-menu-item a,
+.main-navigation ul li.current_page_ancestor a,
+.main-navigation ul li.current-menu-ancestor a,
+.main-navigation ul li.current_page_item a,
+{
+
+  color: $color-primary-blue;
+
+  &:hover,
+  &:visited,
+  .main-navigation ul li:hover > a:after,.main-navigation ul li:hover > a,
+  .main-navigation li.current-menu-ancestor.menu-item-has-children > a:after,
+  .main-navigation li.current-menu-item.menu-item-has-children > a:after,
+  .main-navigation li.menu-item-has-children > a:hover:after,
+  .main-navigation li.page_item_has_children > a:hover:after  {
+
+    color: $color-secondary-blue;
+  }
+}
+
+#site-branding {
+
+  height: auto;
+  overflow: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  img {
+    width: 50%;
+    height: auto;
+  }
+}
