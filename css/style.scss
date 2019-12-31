@@ -1,0 +1,131 @@
+$color-primary-blue: #04428A;
+$color-secondary-blue: #006FAE;
+$color-coral-red: #F93A2B;
+$color-dk-gray: #242424;
+
+$global-spacing: 2em;
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  color: $color-dk-gray;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+
+  &--wide {
+    width: 65%;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'URWClassicoRegular';
+  font-weight: normal;
+  font-style: normal;
+  color: $color-dk-gray;
+}
+
+.page-title,
+p {
+  color: $color-dk-gray;
+}
+
+button,
+input,
+select,
+textarea {
+  color: $color-secondary-blue;
+}
+
+#site-branding {
+
+  height: 150px;
+  overflow: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+
+  img {
+    height: inherit;
+    margin: 0 auto;
+  }
+}
+
+nav {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: $global-spacing;
+  margin-top: $global-spacing/2;
+  align: center;
+  display:inline-flex;
+  justify-content: space-evenly;
+
+  outline: 1px solid $color-primary-blue;
+  background: rgba($color-primary-blue, 1);
+
+  ul {
+    li {
+      display:inline-block;
+
+      color: white;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+
+      a {
+
+        text-decoration: none;
+
+        &:visited {
+          color: white;
+        }
+
+        &:hover {
+          border-bottom: 3px solid white;
+        }
+      }
+
+    }
+  }
+}
+
+a {
+  color: $color-primary-blue;
+  //text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 2px solid $color-primary-blue;
+
+  &:hover {
+    color: rgba($color-primary-blue, .5);
+  }
+}
+section {
+  padding-top: $global-spacing;
+  padding-bottom: $global-spacing;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+footer {
+  background-color: $color-primary-blue;
+  text-align: center;
+  padding:20px;
+  color: white;
+  margin-top: $global-spacing;
+}
+
+.double-border {
+  border-top: 1px solid rgba($color-secondary-blue, .3);
+  height: 5px;
+  border-bottom: 1px solid rgba($color-secondary-blue, .1);
+}
+@import 'responsive';
